@@ -4,8 +4,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "node server.js",
-    "vercel-build": "npm run build"
+    "start": "node server.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
