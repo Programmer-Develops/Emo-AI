@@ -38,9 +38,10 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 
+```
 <div align="center">
 Made with ❤️ and 😊 by the EMO AI Team
 
 "Understanding emotions, one conversation at a time"
 
-</div> ```
+</div>
