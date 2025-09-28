@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMO AI - Real-time Emotion Detection</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface@0.0.7"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>EMO AI</h1>
+            <p class="subtitle">Real-time Emotion Detection</p>
+        </header>
+        
+        <div class="panel emotion-detector">
+            <h2>Emotion Detection</h2>
+            <div class="video-container">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas"></canvas>
+            </div>
+            
+            <div id="status" class="status">Setting up camera...</div>
+            
+            <div class="emotion-display">
+                <h3>Current Emotion</h3>
+                <div id="current-emotion" class="current-emotion">Neutral</div>
+                <div id="confidence" class="confidence">0% confidence</div>
+                
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+                <div id="progress-text">Detecting stable emotion (0s/3s)</div>
+                
+                <div class="emotion-bars" id="emotion-bars">
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="start-btn">Start Detection</button>
+                <button id="reset-btn" class="secondary-btn">Reset</button>
+            </div>
+            
+            <div class="instructions">
+                <p>Let the emotion detection run for 3 seconds to establish your current emotion. The chatbot will then respond according to your emotion.</p>
+            </div>
+        </div>
+        
+        <div class="panel chat-container">
+            <h2>Chat with EMO AI</h2>
+            <div id="chat-messages" class="chat-messages">
+                <div class="message bot-message">
+                    Hello! I'm EMO AI, your emotion-aware chatbot. Let's detect your emotion first so I can respond appropriately.
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message here..." disabled>
+                <button id="send-btn" disabled>Send</button>
+            </div>
+            
+            <div class="instructions">
+                <p>The chatbot will adjust its responses based on your detected emotion. Try expressing different emotions to see how the chatbot adapts!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
