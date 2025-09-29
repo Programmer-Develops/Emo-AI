@@ -495,7 +495,6 @@ function handleSend() {
     
     generateAIResponse(message);
     
-    // Re-enable send button after a delay
     setTimeout(() => {
         isWaitingForAIResponse = false;
         sendBtn.disabled = false;
